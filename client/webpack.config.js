@@ -26,7 +26,7 @@ module.exports = () => {
         template: './index.html',
         title: 'JATE',
       }),
-      new MiniCssExtractPlugin,
+      new MiniCssExtractPlugin(),
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
@@ -60,7 +60,7 @@ module.exports = () => {
           type: 'asset/resource',
         },
         {
-          test: /\.m?js$/,
+          test: /\.mclear?js$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
